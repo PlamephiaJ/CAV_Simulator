@@ -1,0 +1,70 @@
+# MIT License
+
+# Copyright (c) 2020 Hongrui Zheng
+
+# Permission is hereby granted, free of charge, to any person obtaining a copy
+# of this software and associated documentation files (the "Software"), to deal
+# in the Software without restriction, including without limitation the rights
+# to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+# copies of the Software, and to permit persons to whom the Software is
+# furnished to do so, subject to the following conditions:
+
+# The above copyright notice and this permission notice shall be included in all
+# copies or substantial portions of the Software.
+
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+# IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+# FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+# AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+# LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+# OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+# SOFTWARE.
+
+bridge:
+  ros__parameters:
+    odom_topic: '/odom'
+    scan_topic: '/scan'
+    drive_topic: '/drive'
+
+    # transform related
+    scan_distance_to_base_link: 0.0
+    
+    # laserscan parameters
+    scan_fov: 4.7
+    scan_beams: 1080
+
+    # # map parameters
+    # map_path: '/sim_ws/src/f1tenth_gym_ros/maps/Spielberg_map'
+    # map_img_ext: '.png'
+
+    # # opponent parameters
+    # num_agent: 2
+
+    # # car1 starting pose on map
+    # sx1: 0.0
+    # sy1: 0.0
+    # stheta1: 3.4
+
+    # # car2 starting pose on map
+    # sx2: 2.0
+    # sy2: 0.5
+    # stheta2: 0.3
+
+    # map parameters
+    # map_path: '/sim_ws/src/f1tenth_gym_ros/maps/levine_blocked'
+    map_path: '/sim_ws/src/f1tenth_gym_ros/maps/straight_greyscale'
+    map_img_ext: '.png'
+
+    # opponent parameters
+    num_agent: 2
+
+    # initial pose, each column stands for a vehicle.
+    # [vehicle0_x,      vehicle1_x,       vehicle2_x,     ...]
+    # [vehicle0_y,      vehicle1_y,       vehicle2_y,     ...]
+    # [vehicle0_theta,  vehicle1_theta,   vehicle2_theta, ...]
+    start_xs:     [       0.0,    2.210431]
+    start_ys:     [       0.0,  117.104736]
+    start_thetas: [1.57079633, -1.57079633]
+
+    # teleop
+    kb_teleop: True
